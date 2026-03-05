@@ -1,14 +1,29 @@
 # Contributing
 
-## Workflow
+This is a personal portfolio site. It's a single HTML file (`index.html`) with
+inline CSS -- no build step, no dependencies, no framework.
 
-1. Create a branch for each change.
-2. Keep commits focused and small.
-3. Run the project's documented verification commands before commit.
-4. Open a pull request with a clear summary and risk notes.
+## Making Changes
 
-## Standards
+1. Edit `index.html` directly.
+2. Open it in a browser locally to verify it looks right before committing.
+3. Keep commits focused -- one change per commit with a clear message.
+4. Do not introduce external scripts, tracking pixels, or third-party analytics.
 
-- Prefer small, reviewable diffs.
-- Add/update tests for behavioral changes.
-- Do not commit generated runtime artifacts or secrets.
+## What Belongs Here
+
+- Updates to portfolio content (projects, bio, stats)
+- CSS/layout improvements to `index.html`
+- README or documentation updates
+
+## What Does Not Belong Here
+
+- Internal file paths or references to local systems
+- API keys, credentials, or environment-specific config
+- Build artifacts or cache directories
+- Frameworks, npm, or bundlers -- this site intentionally has no build step
+
+## Tests
+
+The smoke test (`tests/test_smoke.py`) just checks the README exists.
+Run with: `pytest tests/`
